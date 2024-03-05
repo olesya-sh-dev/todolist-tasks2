@@ -17,7 +17,22 @@ export function Todolist(props: PropsType) {
   let [filter, setFilter] = useState<FilterValuesType>("all");
 
   let tasksForTodolist = props.tasks;
-
+  // const tasksForTodolist = ()=>{
+  //   let tasksForTodolist = props.tasks
+  //   if (filter === "active") {
+  //     tasksForTodolist = props.tasks.filter((t) => t.isDone === false);
+  //   }
+  //   if (filter === "completed") {
+  //     tasksForTodolist = props.tasks.filter((t) => t.isDone === true);
+  //   }
+  //   if (filter === "displayThree") {
+  //     tasksForTodolist = props.tasks.slice(0, 3);
+  //   }
+  //   if (filter === "deleteAll") {
+  //     tasksForTodolist = [];
+  //   }
+  //   return tasksForTodolist
+  // }
   if (filter === "active") {
     tasksForTodolist = props.tasks.filter((t) => t.isDone === false);
   }
